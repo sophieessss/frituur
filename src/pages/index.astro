@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuItem from "../components/MenuItem.astro";
+import menu from "../data/menu.json";
+---
+
+<Layout pageTitle="Menu">
+  <h1>Our menu</h1>
+  <p>Fries fried twice, in ossewit, since 1987.</p>
+
+  <div class="menu">
+    {menu.map((item) => <MenuItem {...item} />)}
+  </div>
+</Layout>

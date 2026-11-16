@@ -1,0 +1,83 @@
+:root {
+  --colour-text: #222;
+  --colour-muted: #999;
+  --colour-background: var(--colour-background);
+  --colour-surface: white;
+  --colour-accent: #f2c230;
+  --space: 16px;
+  --radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--colour-text);
+  background: var(--colour-background);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space) calc(var(--space) * 2);
+  background: var(--colour-accent);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding: 32px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 24px;
+}
+
+.menu-item {
+  padding: var(--space);
+  background: var(--colour-surface);
+  border-radius: var(--radius);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.category {
+  color: var(--colour-muted);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}

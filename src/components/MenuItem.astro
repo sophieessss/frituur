@@ -1,0 +1,9 @@
+---
+const { name, category, price } = Astro.props;
+---
+
+<article class="menu-item">
+  <h3>{name}</h3>
+  <p class="category">{category}</p>
+  <p class="price">€ {price.toFixed(2)}</p>
+</article>
